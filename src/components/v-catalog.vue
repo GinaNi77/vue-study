@@ -4,7 +4,7 @@
     <vCatalogItem v-for="product in PRODUCTS"
     :key="product.article"
     :product_data="product"
-    @hello="showArticleFromChilde"/>
+    @addToCart="addToCart"/>
   </div>
    
 </template>
@@ -24,10 +24,10 @@ export default {
       ...mapGetters(['PRODUCTS'])
     },
      methods:{
-      ...mapActions(["GET_PRODUCTS_FROM_API"]),
+      ...mapActions(["GET_PRODUCTS_FROM_API", "ADD_TO_CART"]),
 
-      showArticleFromChilde(data){
-        console.log(data)
+      addToCart(data){
+        this.ADD_TO_CART(data)
       },  
     },
     mounted(){
@@ -50,8 +50,19 @@ export default {
   }
 
 .catalog-title{
-  color: #4554e0;
   text-transform: uppercase;
   font-size: 40px;
+  color: #fff;
+  text-shadow:
+   
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 5px #fff,
+   
+    0 0 11px #4554e0,
+    0 0 20px #4554e0,
+    0 0 30px #4554e0,
+    0 0 55px #4554e0,
+    0 0 80px #4554e0;
 }
 </style>
