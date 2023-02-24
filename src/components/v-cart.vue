@@ -92,9 +92,7 @@ export default {
         cursor: pointer;
       }
   }
-  &__empty_cart{
-    
-  }
+  
   &__empty_cart_text{
     font-size: 4em;
     text-align: center;
