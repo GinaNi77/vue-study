@@ -6,14 +6,20 @@
       </div>    
     </router-link>
 
-    <p v-if="!CART.length">Zero items</p>
-
     <h2 class="v-cart__title">cart</h2>
     <vCartItem
     v-for="(item, index) in CART"
     :key="item.article"
     :cart_item_data="item"
     @deleteFromCart="deleteFromCart(index)"/>
+
+    <div v-if="!CART.length" class="v-cart__empty_cart">
+      <p class="v-cart__empty_cart_text">Cart is empty</p>
+      <img src="../../public/img/icons/cat.png" alt="">
+
+    </div>
+
+  
   </div>
  
 </template>
@@ -85,6 +91,14 @@ export default {
       &:hover{
         cursor: pointer;
       }
+  }
+  &__empty_cart{
+    
+  }
+  &__empty_cart_text{
+    font-size: 4em;
+    text-align: center;
+    color: #4554e0,;
   }
 
 }
