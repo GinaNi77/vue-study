@@ -1,8 +1,9 @@
 <template>
   <div class="v-cart">
     <router-link :to="{name:'catalog'}">
-      <div class="v-catalog__link_to_cart"></div>  
-      <button>Back to Catalog</button>
+      <div class="v-cart__link_to_catalog">
+        <i class="medium material-icons">store_mall_directory</i>
+      </div>    
     </router-link>
 
     <p v-if="!CART.length">Zero items</p>
@@ -60,12 +61,13 @@ export default {
   &__title{
   text-transform: uppercase;
   font-size: 40px;
-  color: #fff;
+  color: #e9eaf5;
+  margin-bottom: 1em;
   text-shadow:
    
-    0 0 1px #fff,
-    0 0 2px #fff,
-    0 0 5px #fff,
+    0 0 1px #e9eaf5,
+    0 0 2px #e9eaf5,
+    0 0 5px #e9eaf5,
    
     0 0 11px #4554e0,
     0 0 20px #4554e0,
@@ -73,5 +75,17 @@ export default {
     0 0 55px #4554e0,
     0 0 80px #4554e0;
   }
+
+  &__link_to_catalog{
+      color: #4554e0;
+      position: absolute;
+      top: 2em;
+      right: 30em;
+
+      &:hover{
+        cursor: pointer;
+      }
+  }
+
 }
 </style>

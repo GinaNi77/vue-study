@@ -53,12 +53,13 @@ export default {
     justify-content: space-evenly;
     padding: 1em;
     margin-bottom: 3em;
+    box-shadow: 0 0 2px #c170da;
     border: 10px solid #3d0335;
     border-image: linear-gradient(to left top,#7b0d91 10%,  transparent 30%, transparent 70%, #4554e0 90%);
     border-image-slice: 1;
     background-color: #03031f; 
     color: #e9eaf5;
-    font-size: 16px;
+    font-size: 14px;
 
     &__name{
         font-size: 25px;

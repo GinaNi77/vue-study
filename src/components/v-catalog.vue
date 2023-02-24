@@ -2,7 +2,9 @@
   <div class="v-catalog">
     <h1 class="catalog-title">Catalog</h1>
     <router-link :to="{name:'cart', params:{cart_data:CART} }">
-      <div class="v-catalog__link_to_cart">cart:{{ CART.length }}</div>  
+      <div class="v-catalog__link_to_cart">
+        <i class="medium material-icons">shopping_basket</i>{{ CART.length }}
+      </div>  
     </router-link>
     
     <div class="v-catalog__list">
@@ -60,18 +62,18 @@ export default {
     top: 2em;
     right: 10em;
     padding: 10px;
-    color: white;
+    color: #4554e0;
   }
 
 .catalog-title{
   text-transform: uppercase;
   font-size: 40px;
-  color: #fff;
+  color: #e9eaf5;
   text-shadow:
    
-    0 0 1px #fff,
-    0 0 2px #fff,
-    0 0 5px #fff,
+    0 0 1px #e9eaf5,
+    0 0 2px #e9eaf5,
+    0 0 5px #e9eaf5,
    
     0 0 11px #4554e0,
     0 0 20px #4554e0,

@@ -45,7 +45,7 @@ export default {
     border-image-slice: 1;
     background-color: #03031f; // #0c0c47;
     color: #e9eaf5;
-    font-size: 16px;
+    font-size: 14px;
 
     &__image{
       border: 2px solid #7b0d91;
@@ -88,11 +88,13 @@ export default {
       border: none;
       color: #e9eaf5;
       background-image: linear-gradient(to right, #4554e0, #7b0d91);
+      
+      &:hover{
+        cursor: pointer;
+      } 
     }
 
-    &__add_to_cart_btn:hover{
-    cursor: pointer;
-    } 
+    
 }
 
 p{
