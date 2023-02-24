@@ -1,8 +1,15 @@
 <template>
   <div class="v-cart">
+    <router-link :to="{name:'catalog'}">
+      <div class="v-catalog__link_to_cart"></div>  
+      <button>Back to Catalog</button>
+    </router-link>
+
+    <p v-if="!CART.length">Zero items</p>
+
     <h2 class="v-cart__title">cart</h2>
     <vCartItem
-    v-for="(item, index) in cart_data"
+    v-for="(item, index) in CART"
     :key="item.article"
     :cart_item_data="item"
     @deleteFromCart="deleteFromCart(index)"/>
@@ -12,7 +19,7 @@
 
 <script>
 import vCartItem from "./v-cart-item.vue";
-import {mapActions} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 export default {
     name: 'v-cart',
@@ -31,6 +38,9 @@ export default {
     },
     components:{
      vCartItem,
+    },
+    computed:{
+      ...mapGetters(['CART']),
     },
     methods:{
       ...mapActions(['DELETE_FROM_CART']),
