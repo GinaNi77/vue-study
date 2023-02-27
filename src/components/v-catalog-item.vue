@@ -29,6 +29,7 @@ export default {
     methods:{
       addToCart(){
         this.$emit('addToCart', this.product_data)
+        this.product_data.quantity++
       }
     }
 };
