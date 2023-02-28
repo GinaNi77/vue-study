@@ -20,6 +20,7 @@ export default createStore({
     },
     SET_CART:(state, product)=>{
       state.cart.push(product)
+      product.quantity=1
     },
     REMOVE_FROM_CART:(state, index)=>{
       state.cart.splice(index, 1)
