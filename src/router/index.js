@@ -1,17 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import vCart from '../components/v-cart.vue'
-import vCatalog from '../components/v-catalog.vue'
 
 const routes = [
   {
     name:"catalog",
     path:'/',
-    component: vCatalog
+    component: ()=>import('../components/v-catalog.vue')
   },
   {
     name:"cart",
     path:'/cart',
-    component: vCart,
+    component: ()=>import('../components/v-cart.vue'),
     props: true
   },
 ]
